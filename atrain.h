@@ -53,6 +53,8 @@ inline uint32 SafeTruncateUInt64(uint64 Value)
 #define len(Array) (sizeof(Array) / sizeof((Array)[0]))
 #define len2(Array) (sizeof(Array) / sizeof((Array)[0][0]))
 #define len3(Array) (sizeof(Array) / sizeof((Array)[0][0][0]))
+// Probably not a good idea
+#define newline printf("\n")// specifically a ";" so it can be on the same line
 //
 #if !DEBUG
 #else
