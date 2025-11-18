@@ -17,11 +17,20 @@ typedef int16_t int16;
 typedef int32_t int32;
 typedef int64_t int64;
 //
+typedef uint8_t u8;
+typedef uint16_t u16;
+typedef uint32_t u32;
+typedef uint64_t u64;
+typedef int8_t i8;
+typedef int16_t i16;
+typedef int32_t i32;
+typedef int64_t i64;
+//
 typedef float real32;
 typedef double real64;
+typedef int32_t bool32;
 typedef float f32;
 typedef double f64;
-typedef int32_t bool32;
 // LL ?
 #define KiloBytes(Value) ((Value) * 1024LL)
 #define MegaBytes(Value) (KiloBytes(Value) * 1024LL)
@@ -41,10 +50,11 @@ inline uint32 SafeTruncateUInt64(uint64 Value)
 }
 //
 #define ArrayCount(Array) (sizeof(Array) / sizeof((Array)[0]))
-// len
 #define len(Array) (sizeof(Array) / sizeof((Array)[0]))
 #define len2(Array) (sizeof(Array) / sizeof((Array)[0][0]))
-#define len3(Array) (sizeof(Array) / sizeof((Array)[0][0]))
+#define len3(Array) (sizeof(Array) / sizeof((Array)[0][0][0]))
+// Probably not a good idea
+#define newline printf("\n")// specifically a ";" so it can be on the same line
 //
 #if !DEBUG
 #else
